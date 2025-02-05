@@ -44,7 +44,7 @@
         }
         
         .header img {
-            max-width: 10%;
+            max-width: 20%;
             height: auto;
         }
 
@@ -127,8 +127,18 @@
             margin-bottom: 10px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
+
+        .fundraising-card {
+            background-color: #c9e165; /* Verde chiaro per abbinarsi al tema */
+            color: #333; /* Colore scuro per il testo */
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #28a745; /* Bordo verde scuro */
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
     </style>
-    
 </head>
 <body>
 
@@ -138,7 +148,7 @@
 
     <div class="container text-center">
         <h1>🌍 Sostieni il Progetto della Nostra Rotonda!</h1>
-        <p class="lead">Aiutaci a raggiungere il nostro obiettivo di <span class="highlight">1000€</span>.</p>
+        <p class="lead">Aiutaci a raggiungere il nostro obiettivo di <span class="highlight">1000€</span>!</p>
 
         <br>
         <br>
@@ -160,10 +170,13 @@
         <br>
         <br>
         <br>
-        
-        <p><strong>Raccolti: <span id="collected-amount">0</span> € su 1000 €</strong></p>
+
+        <!-- Card per "Raccolti" -->
+        <div class="fundraising-card">
+            Raccolti: <span id="collected-amount">0</span> € su 1000 €
+        </div>
     
-    <br>
+        <br>
     </div>
 
     <footer class="footer">
@@ -187,17 +200,6 @@
             let circumference = 2 * Math.PI * 60;  // Circonferenza del cerchio
             let offset = circumference * (1 - percentage / 100);
             progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
-
-            let image = document.getElementById("progress-image");
-            if (percentage < 30) {
-                image.src = "https://via.placeholder.com/600x300?text=Inizio+Raccolta";
-            } else if (percentage < 70) {
-                image.src = "https://via.placeholder.com/600x300?text=Metà+Percorso";
-            } else if (percentage < 100) {
-                image.src = "https://via.placeholder.com/600x300?text=Quasi+Arrivati!";
-            } else {
-                image.src = "https://via.placeholder.com/600x300?text=Obiettivo+Raggiunto!";
-            }
         }
 
         updateProgress(); // Inizializza la barra
