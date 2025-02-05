@@ -195,7 +195,7 @@
         function updateProgress() {
             let percentage = (amount / 1000) * 100;
             document.getElementById("collected-amount").textContent = amount;
-            document.getElementById("progress-text").textContent = Math.round(percentage * 100) / 1000 + "%";
+            document.getElementById("progress-text").textContent = Math.round(percentage * 10) / 10 + "%";
 
             let progressCircle = document.querySelector(".progress-bar");
             let circumference = 2 * Math.PI * 60;  // Circonferenza del cerchio
