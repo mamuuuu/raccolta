@@ -33,10 +33,25 @@
             font-size: 1.2rem;
             color: #989898;
             font-family: 'Bold', sans-serif;
-
-            /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);*/
         }
-    
+        
+        .header {
+            background-color: #c9e165; /* Verde per l'header */
+            color: white;
+            padding: 0px 0;
+            border-bottom: 5px solid #ffc107; /* Bordo giallo */
+            text-align: center;
+        }
+        
+        .header img {
+            max-width: 5%;
+            height: auto;
+        }
+
+        .highlight {
+            color: #ff0000; /* Rosso-arancione per il 1000€ */
+        }
+
         .progress-container {
             display: flex;
             justify-content: center;
@@ -117,9 +132,13 @@
 </head>
 <body>
 
+    <div class="header">
+        <img src="./img/Immagine_2025-02-05_140331-removebg-preview.png" alt="Logo"> <!-- Aggiungi qui l'URL dell'immagine -->
+    </div>
+
     <div class="container text-center">
         <h1>🌍 Sostieni il Progetto della Nostra Rotonda!</h1>
-        <p class="lead">Aiutaci a raggiungere il nostro obiettivo di <strong>1000€</strong>.</p>
+        <p class="lead">Aiutaci a raggiungere il nostro obiettivo di <span class="highlight">1000€</span>.</p>
 
         <br>
         <br>
@@ -143,7 +162,6 @@
         <br>
         
         <p><strong>Raccolti: <span id="collected-amount">0</span> € su 1000 €</strong></p>
-    
     
     <br>
     </div>
