@@ -190,7 +190,7 @@
     </footer>
 
     <script>
-        let amount = 50.56;  // Modifica questo valore per aggiornare la raccolta fondi
+        let amount = 0;  // Cambia qui
 
         function updateProgress() {
             let percentage = (amount / 1000) * 100;
@@ -198,7 +198,7 @@
             document.getElementById("progress-text").textContent = Math.round(percentage * 10) / 10 + "%";
 
             let progressCircle = document.querySelector(".progress-bar");
-            let circumference = 2 * Math.PI * 60;  // Circonferenza del cerchio
+            let circumference = 2 * Math.PI * 60;  
             let offset = circumference * (1 - percentage / 100);
             progressCircle.style.strokeDasharray = `${circumference - offset} ${circumference}`;
         }
